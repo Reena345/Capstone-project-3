@@ -49,7 +49,7 @@
                   </div>
                   <div class="col-xxl-3 col-lg-4 d-flex align-items-center ms-3">
                     <!-- Button trigger modal -->
-                    <button type="button"class="btn btn-outline-gray-400 text-reset d-none d-lg-block">
+                    <button type="button"class="btn border d-none d-lg-block">
                       <iconify-icon icon="mdi:location"></iconify-icon>
                       Pick Location
                     </button>
@@ -59,14 +59,8 @@
               <div class="d-flex">
                 <iconify-icon class="p-2 fs-4 d-none d-lg-block" icon="mdi:heart-outline"></iconify-icon>
                 <iconify-icon class="p-2 fs-4" icon="mingcute:contacts-line"></iconify-icon>
-                <iconify-icon class="p-2 fs-4" icon="mage:shopping-bag"></iconify-icon>
-                <button class="navbar-toggler collapsed d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-text-indent-left text-primary" viewBox="0 0 16 16">
-                     <path d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm.646 2.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L4.293 8 2.646 6
-                      354a.5.5 0 0 1 0-.708zM7 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.
-                      5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"></path>
-                  </svg>
-               </button>
+                <iconify-icon class="p-2 fs-4 " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" icon="mage:shopping-bag"></iconify-icon>
+                <button class="border-0 bg-white d-md-none d-block"> <iconify-icon class="p-2 fs-1 text-success" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop" icon="fe:bar"></iconify-icon></button>
               </div>
             </div> 
           </div>
@@ -76,7 +70,7 @@
    
 
     <!-- Nevbar section-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-success" aria-label="Third navbar example">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-success d-none d-md-block" aria-label="Third navbar example">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -163,8 +157,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Sign in</a></li>
-                  <li><a class="dropdown-item" href="#">Sign up</a></li>
+                  <li><a class="dropdown-item" href="./pages/signin.html">Sign in</a></li>
+                  <li><a class="dropdown-item" href="./pages/signup.html">Sign up</a></li>
                   <li><a class="dropdown-item" href="#">Forgot Password</a></li>
                   <li><a class="dropdown-item" href="#">My Account</a></li>
                 </ul>
@@ -257,7 +251,7 @@
       </div>
       <!-- section 3 -->
 
-      <div class="container">
+      <div class="container ">
         <div class="row">
            <div class="col-12">
               <div class="mb-8">
@@ -266,7 +260,7 @@
            </div>
         </div>
         <div class="row ">
-            <div class="col my-3">   
+            <div class="col my-3 text-center text-lg-start">   
                  <div class="card ">
                     <div class="card-body text-center py-3">
                        <img src="./images/category-dairy-bread-eggs 1.jpg" alt="" class="mb-3">
@@ -366,7 +360,7 @@
       </div>
        <!-- section 4 -->
         <!-- API -->
-         <div id="postProduct"></div>
+         <div id="product-list"></div>
          
 
 
@@ -570,21 +564,166 @@
                         <div class="col-md-6">
                            <span > © 2022 2024</span>
                               FreshCart eCommerce HTML Template. All rights reserved. Powered by
-                              <a href="">Codescandy</a>.
+                              <a class="text-decoration-none text-success" href="">Codescandy</a>.
                            </span>
                         </div>
                         <div class="col-md-6 text-lg-end text-center">
-                           <div>
-                              <span class="text-md-end">Follow us on</span>
-                              <iconify-icon icon="f7:logo-facebook"></iconify-icon>
-                              <iconify-icon icon="ant-design:twitter-square-filled"></iconify-icon>
-                              <iconify-icon icon="mage:instagram-square"></iconify-icon>
-                           </div>
+                           <div class="align-items-center">
+                              <span class="text-md-end me-3">Follow us on</span>
+                              <iconify-icon class="fs-3 text-success" icon="f7:logo-facebook"></iconify-icon>
+                              <iconify-icon class="fs-3 text-success" icon="ant-design:twitter-square-filled"></iconify-icon>
+                              <iconify-icon class="fs-3 text-success" icon="mage:instagram-square"></iconify-icon>
+                           </div> 
                         </div>
                      </div>
                   </div>
                </div>
             </footer>
+
+            <!-- offcanvas -->
+
+           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+             <div class="offcanvas-header">
+               <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+             </div>
+             <div class="offcanvas-body">
+               ...
+             </div>
+           </div>
+
+          
+          <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="staticBackdropLabel"> <img src="./images/freshcart-logo.svg" alt="logo" /></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+               <div class="d-block d-lg-none mb-4">
+                  <form action="">
+                     <div class="input-group">
+                        <input class="form-control rounded" type="search" placeholder="Search for products">
+                        <span class="input-group-append">
+                           <button class="btn bg-white border   rounded-0 rounded-end" type="button">
+                              <iconify-icon class="fs-4"icon="material-symbols:search"></iconify-icon>
+                           </button>
+                        </span>
+                     </div>
+                  </form>
+                  <div class="mt-2">
+                     <button type="button" class="btn border w-100" data-bs-toggle="modal" data-bs-target="#locationModal">
+                        <iconify-icon icon="mdi:location"></iconify-icon>
+                        Pick Location
+                     </button>
+                  </div>
+               </div>
+              <div>
+               <div class=" text-black" >
+                  <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item dropdown ">
+                      <li class="d-flex text-black align-items-center ">
+                        
+                        <iconify-icon class="fs-4 "icon="iconamoon:category-thin"></iconify-icon>
+                          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"> 
+                              All Department</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Dairy, Bread & Eggs</a></li>
+                        <li><a class="dropdown-item" href="#">Snacks & Munchies</a></li>
+                        <li><a class="dropdown-item" href="#">Fruits & Vegetables</a></li>
+                        <li><a class="dropdown-item" href="#">Cold Drinks & Juices</a></li>
+                        <li><a class="dropdown-item" href="#">Breakfast & Instant Food</a></li>
+                        <li><a class="dropdown-item" href="#">Bakery & Biscuits</a></li>
+                        <li><a class="dropdown-item" href="#">Chicken, Meat & Fish</a></li>
+                      </ul>
+                      </li>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Home 1</a></li>
+                        <li><a class="dropdown-item" href="#">Home 2</a></li>
+                        <li><a class="dropdown-item" href="#">Home 3</a></li>
+                        <li><a class="dropdown-item" href="#">Home 4</a></li>
+                        <li><a class="dropdown-item" href="#">Home 5</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"> Shop Grid - Filter</a></li>
+                        <li><a class="dropdown-item" href="#">Shop Grid - 3 column</a></li>
+                        <li><a class="dropdown-item" href="#">Shop List - Filter</a</li>
+                        <li><a class="dropdown-item" href="#">Shop - Filter</a></li>
+                        <li><a class="dropdown-item" href="#">Shop Wide</a></li>
+                        <li><a class="dropdown-item" href="#">Shop Single</a></li>
+                        <li><a class="dropdown-item" href="#">Shop Single v2</a></li>
+                        <li><a class="dropdown-item" href="#">Shop Wishlist</a></li>
+                        <li><a class="dropdown-item" href="#">Shop Cart</a></li>
+                        <li><a class="dropdown-item" href="#">Shop Checkout</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Stores</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Store List</a></li>
+                        <li><a class="dropdown-item" href="#">Store Grid</a></li>
+                        <li><a class="dropdown-item" href="#">Store Single</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                          Mega menu</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"> Dairy, Bread & Eggs</a></li>
+                        <li><a class="dropdown-item" href="#"> Dairy, Bread & Eggs</a></li>
+                        <li><a class="dropdown-item" href="#">Butter</a></li>
+                        <li><a class="dropdown-item" href="#">Milk Drinks</a></li>
+                        <li><a class="dropdown-item" href="#">Curd & Yogurt</a></li>
+                        <li><a class="dropdown-item" href="#">Eggs</a></li>
+                        <li><a class="dropdown-item" href="#">Buns & Bakery</a></li>
+                        <li><a class="dropdown-item" href="#">Cheese</a></li>
+                        <li><a class="dropdown-item" href="#">Condensed Milk</a></li>
+                        <li><a class="dropdown-item" href="#">Dairy Products</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Blog</a></li>
+                        <li><a class="dropdown-item" href="#">Blog Single</a></li>
+                        <li><a class="dropdown-item" href="#">Blog Single</a></li>
+                        <li><a class="dropdown-item" href="#">Blog Category</a></li>
+                        <li><a class="dropdown-item" href="#">About us</a></li>
+                        <li><a class="dropdown-item" href="#">404 Error</a></li>
+                        <li><a class="dropdown-item" href="#">Contact</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./pages/signin.html">Sign in</a></li>
+                        <li><a class="dropdown-item" href="./pages/signup.html">Sign up</a></li>
+                        <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+                        <li><a class="dropdown-item" href="#">My Account</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link " href="#" data-bs-toggle="dropdown" aria-expanded="false">Dashboard
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Docs</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
          
 
 
