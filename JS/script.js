@@ -14,7 +14,7 @@ let disPlayProduct = async () => {
 
   finalProduct.forEach((element) => {
     productDiv.innerHTML += `
-    <div class="card-container my-2 px-2 col-lg-3 col-md-3 col-6" ; ">
+    <div class="card-container my-2 px-2 col-lg-3 col-md-3 col-12 col-sm-6" ; ">
       <div class="card text-center">
         <img src="${element.image}" class="card-img-top p-4 img-fluid" alt="" style="height: 200px; object-fit: contain;">
         <div class="card-body d-flex flex-column">
